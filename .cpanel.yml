@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/overnzbk/crp.overseashighwaystudy.com/
+    - /bin/mkdir -p "$DEPLOYPATH"
+    - /bin/tar --exclude=.git --exclude=.cpanel.yml -cf - . | /bin/tar -xf - -C "$DEPLOYPATH"
